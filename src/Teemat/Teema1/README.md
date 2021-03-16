@@ -12,7 +12,7 @@ On myös syytä huomata, että vaikka Linux-asetuksia voidaan hallita graafisen 
 
 Valintoihin tuli otettua mukaan seuraavanlaisia pointteja. Koska minulla ei ole Linux kokemusta valitsin aloittelijan. Päivitykset halusin suoritettavan nopeasti ja näin alkuun Windowsin näköinen käyttöjärjestelmä olisi alkuun helpompi totutella ilman aikaisempaa osaamista. Lisäksi halusin jakelupaketin, joka olisi suosittu, koska niistä löytyy todennäköisesti enemmän tuki vaihtoehtoja.  Top 3 vaihtoehdot näkyvät alla.
 
-[](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/jakelupaketit.jpg)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/jakelupaketit.jpg)
 
 
 KDE neon sijoitus top 100 listalla oli 12 ja käyttäjä arviot 9/10 joten paketti on saanut suosiota käyttäjien keskuudessa.
