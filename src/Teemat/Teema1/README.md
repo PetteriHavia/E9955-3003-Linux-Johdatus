@@ -36,4 +36,4 @@ Monsterin sivulta 16.3.2021 hakusanalla ”Linux” löytyi yhteensä 58 työpai
 
 Alapuolella kolme ilmoitusta Monsterin sivulta:
 
-1. [Embedded Linux Specialist]
+1. [Embedded Linux Specialist](src/kuvat/ilmoitus1.jpg)
