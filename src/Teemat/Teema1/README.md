@@ -19,7 +19,7 @@ KDE neon sijoitus top 100 listalla oli 12 ja käyttäjä arviot 9/10 joten paket
 
 ---
 
-#1.2\.Linux työmarkkinoilla
+# 1.2\. Linux työmarkkinoilla
 
 - ### A: Tarkastele Linux-osaajien työtilannetta. Miltä näyttää Linux-osaajien työtilanne tällä hetkellä [Open Source Job Reportin 2018](https://www.linuxfoundation.org/wp-content/uploads/2019/10/osjobsreport_2018.pdf) ja [Linux Job Reports 2017](https://resources.linuxfoundation.org/LF+Core/publication_Linux_2017_Jobs_Report_final.pdf) -raportin mukaan? Miten tilanne on kehittynyt edellisiin vuosiin verrattuna?
 
