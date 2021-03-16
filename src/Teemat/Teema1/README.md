@@ -42,3 +42,33 @@ Monsterin sivulta 16.3.2021 hakusanalla ”Linux” löytyi yhteensä 58 työpai
 Alapuolella kolme ilmoitusta Monsterin sivulta:
 
 1. [Embedded Linux Specialist](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ilmoitus1.jpg)
+
+Etteplan etsii sulatetun Linuxin asiantuntijoita Ouluun, Kuopioon Tampereelle ja Jyväskylään. Eri tasoisiin rooleihin kuten automotive-, telecommunications-, medical-, IoT- sekä industrial- tuotekehityshankkeisiin.
+
+- Ohjelmistokehityksestä C tai C++ kielillä
+- Linux kernelin tai laiteajureiden kehityksestä
+- Linux userspace -sovellusten kehittämisestä
+- Sulautettujen järjestelmien integroinnista
+
+---
+
+2. [Cloud Engineer](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ilmoitus3.jpg)
+
+Amban Nordic Oy etsii cloud engineeriä asiakasprojekteihin, jotka kattavat toimialoja kuten telecom, rahoitus, media, ja logistiikka sekä julkisia sektoreita. Linux koetaan hakemuksessa hyödyllisenä osaamisena.
+
+- Kokemusta ohjelmistokehityksestä
+- Pilvipuolelta esim. Google, AWS, Open Stack tai Azure
+- Ohjelmointitaidot esim. Python, Java, JS:n joku oleellinen framework.
+- Serveripuolelta Linuxista on aina hyötyä.
+
+---
+
+3. [Ohjelmistokehittäjä](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ilmoitus2.jpg)
+
+Teleste hakee ohjelmisto kehittäjää rakentamaan web- ja mobiiliratkaisuja, joko front tai backend puolelle. Tuntemusta vaaditaan seuraavista asioista:
+
+- Python, REST, JavaScript/TypeScript, SQL
+- Django, Flask, ReactJS
+- SQL Server, MongoDB
+- Linux, Windows Server, Azure
+- DevOps, Git, Jenkins, Docker
