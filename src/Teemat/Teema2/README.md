@@ -22,7 +22,7 @@ Heti koneen käyttöjärjestelmän käynnistymisen jälkeen pystyi jo huomaamaan
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/kde_neon2.jpg)
 
-Järjestelmä myös tarjosi uusinta versiota 5.20.4 asennettavaksi, mutta tämä epäonnistui tuntemattomasta syystä, joten menin neon.kde.org sivustolle latasin uusimman version. Muutaman asennus videon jälkeen sain järjestelmän asennettua ja toimimaan.
+Järjestelmä myös tarjosi uusinta versiota 5.20.4 asennettavaksi, mutta tämä epäonnistui tuntemattomasta syystä, joten menin neon.kde.org sivustolle ja latasin uusimman version. Muutaman asennus videon jälkeen sain järjestelmän asennettua ja toimimaan.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/kde_neon5.20.4new.jpg)
 
