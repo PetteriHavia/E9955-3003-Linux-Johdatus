@@ -48,6 +48,6 @@ USB tikkuna toimi todella vanha USB 2.0 Kingston Datatraveller G3, jossa tilaa 8
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/usb_boot.jpg)
 
-Asennuksen jälkeen tein uuden virtuaalikoneen, josta käynnistin Linuxin USB:n kautta. Käynnistykseen kului muutamia minuutteja, jonka jälkeen tuttu Mint työpöytä aukesi ruudulle
+Asennuksen jälkeen tein uuden virtuaalikoneen, josta käynnistin Linuxin USB:n kautta. Käynnistykseen kului muutamia minuutteja, jonka jälkeen tuttu Mint työpöytä aukesi ruudulle.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/usb_mint.jpg)
