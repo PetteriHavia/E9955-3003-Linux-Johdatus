@@ -34,14 +34,20 @@ Järjestelmä myös tarjosi uusinta versiota 5.20.4 asennettavaksi, mutta tämä
 
 Kurssilla jokaiselle opiskelijalle oli lähetetty kirjautumislinkki, jonka avulla pystyi käyttämään Azuressa olevaa Linux-konetta RPD-yhteyden avulla. Hetken mietiskelyn ja tiedon keruun jälkeen päädyin kokeilemaan Remmia nimistä ohjelmaa, joka on avoimen lähdekoodin ilmainen etätyöpöytäohjelma Linux-ja Unix-pohjaisiin järjestelmiin. Asensin ohjelman Linux Mint järjestelmään komentokehotteen kautta muutamalla komennolla. Tämän jälkeen syötettiin host ja portti tiedot ohjelmaan ja luotiin yhteys Azure Linux-koneeseen.
 
-![]()
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/remmina.jpg)
 
 SSH yhdistämisen kanssa ilmeni enemmän ongelmia. Käytin SSH yhteyden luomiseen Putty nimistä ohjelmaa, jota myös käytetiin kurssin opetusvideolla, mutta jostain syystä host ja porttitietojen syöttämisen jälkeen ohjelma jumittui aina mustaan näyttöön, enkä päässyt antamaan kirjautumistunnuksia. Seurasin kurssin videota ja yritin etsiä mahdollisia syitä ohjelman jäätymiselle netistä löytämättä ratkaisua.
 
-![]()
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/Putty.jpg)
 
 ---
 
 - ### B: Linux USB-tikulle
 
-USB tikkuna toimi todella vanha USB 2.0 Kingston Datatraveller G3, jossa tilaa 8gb eli ihan riittävästi tähän operaatioon. Latasin pendrivelinuxin YUMI nimisen ohjelman, josta löytyy suuri valikoima jo valmiiksi tuettuja Linuxin eri asennuksia. Pysyin vielä tutussa ja turvallisessa Linux Mint jakelussa, koska halusin nähdä kuinka nopeasti se asentuu USB-tikulta. Asensin jakelun muistitikulle käyttäen YUMI ohjelmaa apuna. Asennuksen jälkeen tein uuden virtuaalikoneen, josta käynnistin Linuxin USB:n kautta. Käynnistykseen kului muutamia minuutteja, jonka jälkeen tuttu Mint työpöytä aukesi ruudulle
+USB tikkuna toimi todella vanha USB 2.0 Kingston Datatraveller G3, jossa tilaa 8gb eli ihan riittävästi tähän operaatioon. Latasin pendrivelinuxin YUMI nimisen ohjelman, josta löytyy suuri valikoima jo valmiiksi tuettuja Linuxin eri asennuksia. Pysyin vielä tutussa ja turvallisessa Linux Mint jakelussa, koska halusin nähdä kuinka nopeasti se asentuu USB-tikulta. Asensin jakelun muistitikulle käyttäen YUMI ohjelmaa apuna.
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/usb_boot.jpg)
+
+Asennuksen jälkeen tein uuden virtuaalikoneen, josta käynnistin Linuxin USB:n kautta. Käynnistykseen kului muutamia minuutteja, jonka jälkeen tuttu Mint työpöytä aukesi ruudulle
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/usb_mint.jpg)
