@@ -1,4 +1,4 @@
-#2\. Asennus ja peruskäyttö
+# 2\. Asennus ja peruskäyttö
 ---
 - ### 2.1: Linuxin asentaminen paikallisesti
 ---
@@ -25,3 +25,23 @@ Heti koneen käyttöjärjestelmän käynnistymisen jälkeen pystyi jo huomaamaan
 Järjestelmä myös tarjosi uusinta versiota 5.20.4 asennettavaksi, mutta tämä epäonnistui tuntemattomasta syystä, joten menin neon.kde.org sivustolle latasin uusimman version. Muutaman asennus videon jälkeen sain järjestelmän asennettua ja toimimaan.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/kde_neon5.20.4new.jpg)
+
+---
+
+# 2.3\. Linuxin asentaminen - vaihtoehtoja
+
+- ### A: Linux Azure-pilvessä
+
+Kurssilla jokaiselle opiskelijalle oli lähetetty kirjautumislinkki, jonka avulla pystyi käyttämään Azuressa olevaa Linux-konetta RPD-yhteyden avulla. Hetken mietiskelyn ja tiedon keruun jälkeen päädyin kokeilemaan Remmia nimistä ohjelmaa, joka on avoimen lähdekoodin ilmainen etätyöpöytäohjelma Linux-ja Unix-pohjaisiin järjestelmiin. Asensin ohjelman Linux Mint järjestelmään komentokehotteen kautta muutamalla komennolla. Tämän jälkeen syötettiin host ja portti tiedot ohjelmaan ja luotiin yhteys Azure Linux-koneeseen.
+
+![]()
+
+SSH yhdistämisen kanssa ilmeni enemmän ongelmia. Käytin SSH yhteyden luomiseen Putty nimistä ohjelmaa, jota myös käytetiin kurssin opetusvideolla, mutta jostain syystä host ja porttitietojen syöttämisen jälkeen ohjelma jumittui aina mustaan näyttöön, enkä päässyt antamaan kirjautumistunnuksia. Seurasin kurssin videota ja yritin etsiä mahdollisia syitä ohjelman jäätymiselle netistä löytämättä ratkaisua.
+
+![]()
+
+---
+
+- ### B: Linux USB-tikulle
+
+USB tikkuna toimi todella vanha USB 2.0 Kingston Datatraveller G3, jossa tilaa 8gb eli ihan riittävästi tähän operaatioon. Latasin pendrivelinuxin YUMI nimisen ohjelman, josta löytyy suuri valikoima jo valmiiksi tuettuja Linuxin eri asennuksia. Pysyin vielä tutussa ja turvallisessa Linux Mint jakelussa, koska halusin nähdä kuinka nopeasti se asentuu USB-tikulta. Asensin jakelun muistitikulle käyttäen YUMI ohjelmaa apuna. Asennuksen jälkeen tein uuden virtuaalikoneen, josta käynnistin Linuxin USB:n kautta. Käynnistykseen kului muutamia minuutteja, jonka jälkeen tuttu Mint työpöytä aukesi ruudulle
