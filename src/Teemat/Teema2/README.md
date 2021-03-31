@@ -24,7 +24,7 @@ Heti koneen käyttöjärjestelmän käynnistymisen jälkeen pystyi jo huomaamaan
 
 Järjestelmä myös tarjosi uusinta versiota 5.20.4 asennettavaksi, mutta tämä epäonnistui tuntemattomasta syystä, joten menin neon.kde.org sivustolle ja latasin uusimman version. Muutaman asennus videon jälkeen sain järjestelmän asennettua ja toimimaan.
 
-![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/kde_neon20.4.jpg)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/kde_neonUpdate.jpg)
 
 ---
 
