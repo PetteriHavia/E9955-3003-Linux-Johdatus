@@ -5,6 +5,7 @@
 A) cat /var/log/syslog | wc -l
 
   - Komennolla otetaan selvää syslog tiedoston rivimäärästä.
+
     Rivimäärä: 7 (Kokeiltu nimet.txt tiedostoon, johon lisätty 7 eri nimeä)
 
 ---
@@ -13,11 +14,14 @@ B) ls -l | sort  -r |  more
 
 - Tämä komento listaa nykyisen polun tiedostot ja järjestää ne  päinvastaisessa järjestyksessä uusimmasta vanhimpaan, ja more komento putkitettuna helpottaa tulosten selaamista ja hakemista.
 
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/sort_more.jpg)
+
 ---
 
 C) ls | head -3 | tail -1 > myoutput
 
 - Tulostaa nykyisen polun komannen tiedostonimen
+
   Tulos: Downloads
 
 ---
@@ -82,6 +86,7 @@ chmod 444 pakattu.tar.gz
 C) Luo hakemisto ja anna kaikille lukuoikeus sinne, mutta vain omistajalla tulisi olla kirjoitus ja suoritusoikeus siihen.  Esitä ratkaisu sekä kirjain- että numeromuotoista komentoa käyttäen.
 
 mkdir -m go-wx hakemisto
+
 mkdir -m 744 hakemisto
 
 ---
@@ -107,6 +112,7 @@ Tulos: foo@demo.net bar.ba@test.co.uk mika@sci.fi mika.stenberg@laurea.fi
 C) Entä vakiomuotoisia IP-osoitteita kaikista hakemistossa olevista tekstitiedostoista? Voit olettaa että IP osoite rakentuu neljästä numerosta, jotka ovat erotettu pisteellä toisistaan ja ovat arvoalueeltaan 0-255 seuraavasti. 1.0.0.0 tai 192.168.0.1 tai 255.255.255.255.
 
 grep -oE ' ([0-9]{1,3}[\.]){3}[0-9]{1,3}'
+
 Tulos: 255.255.255.0 127.0.0.1
 
 ---
@@ -146,6 +152,7 @@ Tulos: Ezra A. Rogers (+91 5206512856)
 B) Tulosta awk-työkalua käyttäen henkilöiden nimi, katuosoite sekä asuinmaa. Erota tiedot sarkaimellä (tab eli \t). Järjestä tulos aakkosjärjestykseen maan muun aakkostettuna. Vinkki: käytä putkitusta.
 
 Sain tuloksen järjestykseen Nimen mukaan, mutta en maan vaikka kokeilin sort -k3
+
 awk -F ";" '{print $1,$2,$3}' OFS="\t" awktiedosto.txt |sort -k1
 
 ---
@@ -158,7 +165,7 @@ Tulos: Kyllä 5 Ei 2
 
 ---
 
-D) Hae HY:n almanakkatoimiston sivulta (https://almanakka.helsinki.fi/fi/) tms. verkkosivuston etusivu wget -komennon avulla. Etsi siitä Grep-työkalun avulla nimipäiväsankarit. Käytä AWK tai SED -työkaluja tulostaaksesi sankarien nimet ja riisuaksesi HTML tägit. ( 2p.)
+D) Hae HY:n almanakkatoimiston sivulta (https://almanakka.helsinki.fi/fi/) tms. verkkosivuston etusivu wget -komennon avulla. Etsi siitä Grep-työkalun avulla nimipäiväsankarit. Käytä AWK tai SED -työkaluja tulostaaksesi sankarien nimet ja riisuaksesi HTML tägit.
 
 --
 
@@ -180,6 +187,7 @@ C) Miten etsit ja korvaat kaikki tiedostossa esiintyvät sanat kolmelle eri haku
 
 --
 
+---
 
 D) Miten etsit sanaa “Enfield” tiedostosta ja lisäät kaikkien sen esiintymien ympärille lainausmerkit?
 
@@ -194,19 +202,18 @@ A) Luo kolme tiedostoa: ensimmäinen tiedosto sisältää kolmen henkilön nimet
 
 paste nimia.txt osoite.txt puhelin.txt
 
-Tulos:
-Petteri	jokukuja 4	123 456 4562
-Jani	tamakuja 2	345 656 3456
-Ville	ketakuja 7	123 546 7434
+KUVA
 
 ---
 
 B) Tutki aiemmin haettua tiedostoa pg14152.txt wc-komennolla. Montako riviä siinä on? Jaa tiedosto tämän jälkeen split - komennolla osiin. Montako riviä tulostiedostoissa on oletuksena?
 
 wc -l pg14152.txt
+
 Tulos: 3381 pg14152.txt
 
 split pg14152.txt
+
 Tulos: 7 uutta tiedostoa, jossa jokaisessa oletuksena 1000 riviä
 
 ---
@@ -230,6 +237,7 @@ sed 200,300d pg14152.txt
 A) Komentorivikehotteen (promptin) tulisi näyttää käyttäjänimi sekä kellonaika?
 
 export PS1=”\u \d ”
+
 Tulos: osboxes Tue Apr 20
 
 ---
@@ -238,6 +246,7 @@ B) Komentorivikehotteen (promptin) tulisi näyttää tietokoneen nimi (hostname)
 komentorivitulkki (Shell) sekä sen versio?
 
 Export PS1=”\h \s \v”
+
 Tulos: osboxes bash 5.0
 
 ---
@@ -245,7 +254,8 @@ Tulos: osboxes bash 5.0
 C) Komentorivikehotteen (promptin) tulisi näyttää vakiotervehdys “Hei käyttäjännimi, mitä tehdään tänään?” valitsemallasi värillisellä tekstillä? (jossa käyttäjän nimi vaihtuu järjestelmässä kirjautuneena olevan käyttäjän nimellä)
 
 export PS1="\[\e[36m\]Hei \[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\],mitä tehdään tänään?\[\e[m\]"
-Tulos: Hei osboxes, mitä tehdään tänään?(sinisellä)
+
+KUVA
 
 ---
 
@@ -254,14 +264,16 @@ Tulos: Hei osboxes, mitä tehdään tänään?(sinisellä)
 A) luo alias “backup” joka pakkaa kotihakemistosi alihakemistoineen kansioon backup.zip
 
 alias backup="tar -zcvpf pakattu.tar.gz /home/osboxes"
+
 Tulos: Komennon annettua pakkaa kaikki ”home” kansion tiedostot yhteen ”pakattu” nimiseen kansioon
 
 ---
 
 B) luo alias “poista” joka poistaa komennon perässä annetun tiedoston mutta kysyy siitä ensin
-varmistuksen (vinkki katso komennon rm valitsimia)
+varmistuksen.
 
 alias poista =”rm -i”
+
 Tulos: poista tiedosto.txt > komento kysyy varmistusta yes/no -i avulla > yes ja tiedosto on poistunut
 
 ---
@@ -281,6 +293,7 @@ D) luo alias “päivitä” joka lataa ja tarkistaa järjestelmäpäivitykset p
 E) keksi joku näppärä alias, joka helpottaisi omaa tietokoneen käyttöäsi
 
 Alias systeminfo=”free -m -l -t”
+
 Tulos: Näyttää järjestelmän muistin, cpu ja gpu tiedot
 
 ---
@@ -292,16 +305,23 @@ A) Tee skripti joka kysyy sinulta nimesi ja ikäsi. Tämän jälkeen skripti tul
 
 Scripti tiedosto
 
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/script1.jpg)
+
 Tulos
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/script1x.jpg)
 
 ---
 
 B) Tee skripti, joka kysyy käyttäjätunnuksen ja salasanan. Jos tunnus on “opiskelija” ja salasana “demo” tulostetaan “Oikein, tervetuloa!”. Muuten tulostetaan “Syötit väärän tunnuksen tai salasanan”.
 
-Scripti tiedostoa
+Scripti tiedosto
 
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/script2.jpg)
 
 Tulos
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/script2x.jpg)
 
 ---
 
@@ -316,51 +336,7 @@ D) Tee arvauspeli joko pyytää käyttäjää syöttämään numeron. Jos numero
 
 Scripti tiedostoa
 
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/arvaanumero.jpg)
+
 Tulos
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Opintojakso on vapaavalintainen opintojakso tietojenkäsittelyn tutkintoon Laurea-ammattikorkeakoulussa.
-Opintojakso koostuu viidestä teemasta, joista jokaiseen opiskelija perehtyy itsenäisesti materiaaleihin tutustuen.
-
-## Sisällysluettelo
-
-| Sisältö |                         |
-| :------:| :---------------------: |
-|    1    |	Johdatus Linuxiin       |
-| 	 2    | Asennus ja peruskäyttö  |
-|    3    | Komentorivin käyttö     |
-|    4    | Järjestelmän ylläpito   |
-|    5	  | Tietoturva              |
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/arvaanumerox.jpg)
