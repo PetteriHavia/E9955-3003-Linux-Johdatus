@@ -202,7 +202,7 @@ A) Luo kolme tiedostoa: ensimmäinen tiedosto sisältää kolmen henkilön nimet
 
 paste nimia.txt osoite.txt puhelin.txt
 
-KUVA
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/paste.jpg)
 
 ---
 
@@ -255,7 +255,7 @@ C) Komentorivikehotteen (promptin) tulisi näyttää vakiotervehdys “Hei käyt
 
 export PS1="\[\e[36m\]Hei \[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\],mitä tehdään tänään?\[\e[m\]"
 
-KUVA
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/variteksti.jpg)
 
 ---
 
@@ -295,6 +295,8 @@ E) keksi joku näppärä alias, joka helpottaisi omaa tietokoneen käyttöäsi
 Alias systeminfo=”free -m -l -t”
 
 Tulos: Näyttää järjestelmän muistin, cpu ja gpu tiedot
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/alias.jpg)
 
 ---
 
@@ -339,4 +341,5 @@ Scripti tiedostoa
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/arvaanumero.jpg)
 
 Tulos
+
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/arvaanumerox.jpg)
