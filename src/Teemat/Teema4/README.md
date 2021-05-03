@@ -66,9 +66,9 @@ Opiskelija käyttöliittymän kautta
 
 ## 4.2: Prosessien hallinta
 
-### *Käynnistä komentoriviltä muutamia ohjelmia, esim pico-editori ja firefox selain. Tutki järjestelmän prosesseja sekä graafisessa käyttöliittymässä että komentoriviltä (kts. luentokalvot).*
+### *Käynnistä komentoriviltä muutamia ohjelmia, esim pico-editori ja firefox selain. Tutki järjestelmän prosesseja sekä graafisessa käyttöliittymässä että komentoriviltä.*
 
-### *1. Selvitä mitkä ovat prosessien ID numerot ja millä prioriteetilla ohjelmat ajetaan? Ota kuvakaappaus tilanteesta.*
+### *1. Selvitä mitkä ovat prosessien ID numerot ja millä prioriteetilla ohjelmat ajetaan?*
 
 Käytetyt ohjelmat: Firefox ja Celluloid
 
@@ -80,9 +80,9 @@ Firefox ID: 3022, prioriteetti 20. Celluloid ID 3256 prioriteetti 20.
 
 ### *2. Muuta prosessien nice-arvoja siten, että niitä ajetaan korkeammalla prioriteetilla.*
 
-nice -n 5 firefox &
+`nice -n 5 firefox &`
 
-nice -n 4 celluloid &
+`nice -n 4 celluloid &`
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/niceprio.jpg)
 
@@ -90,9 +90,9 @@ nice -n 4 celluloid &
 
 ### *3. Lopeta prosessit komentorivillä, käyttäen kill-komentoa. Kokeile erilaisia valitsimia. Kerro mitä valitsimet tekevät.*
 
-Lopetetaan prosessi ID:n avulla: kill % (PID)
+Lopetetaan prosessi ID:n avulla: `kill % (PID)`
 
-Lopetetaan prosessi ohjelman nimellä: kill (ohjelman nimi)
+Lopetetaan prosessi ohjelman nimellä: `kill (ohjelman nimi)`
 
 ---
 
@@ -100,17 +100,17 @@ Lopetetaan prosessi ohjelman nimellä: kill (ohjelman nimi)
 
 Etsitään "Firefox" ja celluloid
 
-ps aux | egrep 'firefox|celluloid'
+`ps aux | egrep 'firefox|celluloid'`
 
 Etsitään prosesseista termiä ”Firefox” sekä ”Celluloid” ja putkitetaan se niin että AWK tulostaa saatujen hakujen prosessinumerot
 
-aux | egrep 'firefox|celluloid' | awk '{print $2}'
+`aux | egrep 'firefox|celluloid' | awk '{print $2}'`
 
 ---
 
 ### *5. Miten lopettaisit ne yhdellä komennolla*
 
-pkill -9 -f "\.\/.+\s\.|firefox|vlc|\[^"
+`pkill -9 -f "\.\/.+\s\.|firefox|celluloid|\[^"`
 
 ---
 
@@ -139,6 +139,8 @@ Joka päivä klo 23:55 suoritetaan komento "varmuuskopioi.sh". Komento tulisi su
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/infotop.jpg)
 
 Etsi rsyslog -niminen palvelu. Millä komennolla löydät palvelun?
+
+`ps aux | grep 'rsyslog'`
 
 Onko palvelu käytössä?
 
@@ -173,12 +175,17 @@ Verkosta tai man-sivuiltas mitä kyseinen palvelu tekee?
 ---
 ### *3. Luo sen jälkeen uusi palvelu nimeltä testi. Palvelun tulee sisältää seuraava bash skripti:*
 
-`echo "Testi starttaa"`
-`while :`
-`do`
-`[ -d "/home" ] && echo "Directory /home/ exists.";`
-`sleep 15s;`
-`done`
+`echo "Testi starttaa"
+
+while :
+
+do
+
+[ -d "/home" ] && echo "Directory /home/ exists.";
+
+sleep 15s;
+
+done`
 
 Ota kuva palvelun Statuksesta.
 
