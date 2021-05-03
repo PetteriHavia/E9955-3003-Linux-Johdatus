@@ -98,7 +98,7 @@ Lopetetaan prosessi ohjelman nimellä: `kill (ohjelman nimi)`
 
 ### *4 .Etsi käynnistämäsi sovellukset prosessilistauksesta yhdellä tai useammalla grep-komennolla.*
 
-Etsitään "Firefox" ja celluloid
+Etsitään "Firefox" ja "celluloid"
 
 `ps aux | egrep 'firefox|celluloid'`
 
@@ -245,11 +245,11 @@ Ota kuvakaappaus tai tuloste talteen tekemästäsi palvelusta ja sen suoritukses
 
 ---
 
-### *6.Käyttäen Iostat sovellusta katso kuinka paljon levylle on kirjoitettu yhteensä edellisen käynnistyksen jälkeen? Kuinka paljon dataa on luettu?*
+### *6. Käyttäen Iostat sovellusta katso kuinka paljon levylle on kirjoitettu yhteensä edellisen käynnistyksen jälkeen? Kuinka paljon dataa on luettu?*
 
 - Dataa kijroitettu 584MB
 
-- Dataa luettu 1324MB
+- Dataa luettu 1314MB
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/iostat.jpg)
 
