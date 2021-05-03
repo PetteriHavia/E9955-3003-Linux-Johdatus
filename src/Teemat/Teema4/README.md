@@ -1,6 +1,6 @@
 # 4\. Järjestelmän ylläpito
 
-## 4.1 Käyttäjähallinta
+## 4.1: Käyttäjähallinta
 
 1.Luo kaksi uutta käyttäjää (opettaja ja opiskelija). Käytä toisen luomisessa komentoriviä ja toisen graafista käyttöliittymää. Aseta käyttäjille myös kotihakemistot.
 
@@ -8,11 +8,11 @@
 
 - Käyttäjän voisi myös tehdä komennolla useradd -m username, jossa -m luo käyttäjälle kotihakemiston
 
-(add Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/add.jpg)
 
 Lisääminen graafisen liittymän kautta tapahtuu painamalla Add nappulaa.
 
-(Home Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/home.jpg)
 
 Käyttäjien kotihakemistot
 
@@ -22,16 +22,16 @@ Käyttäjien kotihakemistot
 
 sudo usermod -a -G opettajat opettaja
 
-(group Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/group.jpg)
 
-(opisGroup Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/opisGroup.jpg)
 
 ---
 
 3.Luo hakemistot “opiskelijoiden_tiedostot” ja "opettajien_tiedostot", joille annat oikeudet vain asianosaisille ryhmille. Varmista kokeilemalla molemmilla käyttäjillä, että oikeudet ovat voimassa. Käytä ainakin toisessa operaatiossa komentoriviä
 
 
-Opiskelijat
+Opiskelijat:
 
 Luodaan hakemisto:
 
@@ -42,13 +42,13 @@ Asetetaan vaadittavat oikeudet:
 sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot
 
 
-Opettajat
+Opettajat:
 
 Komennot voidaan myös putkittaa yhteen
 
 sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot | sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot
 
-(hakemistot Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/hakemistot.jpg)
 
 ---
 
@@ -56,15 +56,15 @@ sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot | sudo chown opiskelija /ho
 
 Lukitaan opettaja komentorivin kautta: Sudo usermod -L opettaja
 
-(lock kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/lock.jpg)
 
 Opiskelija käyttöliittymän kautta
 
-(lock2 kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/lock2.jpg)
 
 ---
 
-##4.2 Prosessien hallinta
+## 4.2: Prosessien hallinta
 
 Käynnistä komentoriviltä muutamia ohjelmia, esim pico-editori ja firefox selain. Tutki järjestelmän prosesseja sekä graafisessa käyttöliittymässä että komentoriviltä (kts. luentokalvot).
 
@@ -74,7 +74,7 @@ Käytetyt ohjelmat: Firefox ja Celluloid
 
 Firefox ID: 3022, prioriteetti 20. Celluloid ID 3256 prioriteetti 20.
 
-(process kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/process.jpg)
 
 ---
 
@@ -84,7 +84,7 @@ nice -n 5 firefox &
 
 nice -n 4 celluloid &
 
-(niceprio Kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/niceprio.jpg)
 
 ---
 
@@ -130,13 +130,13 @@ Joka päivä klo 23:55 suoritetaan komento "varmuuskopioi.sh". Komento tulisi su
 
 ---
 
-##4.3 Palveluiden luominen
+## 4.3: Palveluiden luominen
 
 1.Käynnistä Linux-terminaali ja tutki järjestelmän palveluita. Kuinka monta palvelua on running tilassa?
 
 1 palvelu running tilassa
 
-(infotop kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/infotop.jpg)
 
 Etsi rsyslog -niminen palvelu. Millä komennolla löydät palvelun?
 
@@ -152,7 +152,7 @@ systemctl list-units --type service state running
 
 rsyslog on käynnissä
 
-(running kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/running.jpg)
 
 - Mikä on Rsyslog palvelun PID
 
@@ -182,7 +182,7 @@ done
 
 - Ota kuva palvelun Statuksesta.
 
-(testrunning kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/testirunning.jpg)
 
 - Mikä on palvelun PID?
 
@@ -198,13 +198,13 @@ Statuksessa tulostetaan palvelun tila (enabled/disabled) onko palvelu käynniss�
 
 - Ota kuvakaappaus tai tuloste talteen tekemästäsi palvelusta ja sen suorituksesta
 
-(testistatus kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/testistatus.jpg)
 
 ---
 
-##4.4 Resurssien hallinta
+## 4.4: Resurssien hallinta
 
-(htop kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/htop.jpg)
 
 1.Mikä palvelu käyttää eniten suoritinta Htop sovelluksessa?
 
@@ -234,7 +234,7 @@ PID 1340 - cinnamon
 
 Käytetään SIGKILL signaalia lopettamaan Firefox
 
-(sigkill kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/sigkill.jpg)
 
 ---
 
@@ -244,7 +244,7 @@ Dataa kijroitettu 584MB
 
 Dataa luettu 1324MB
 
-(iostat kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/iostat.jpg)
 
 ---
 
@@ -258,7 +258,7 @@ Dataa luettu 1324MB
 
 2.13MByte
 
-(nloadKuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/nload.jpg)
 
 ---
 
@@ -266,7 +266,7 @@ Dataa luettu 1324MB
 
 10.0.2.15
 
-(ipaddr kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ipaddr.jpg)
 
 ---
 
@@ -274,10 +274,10 @@ Dataa luettu 1324MB
 
 15 pakettia lähetetty, 13 vastaanotettu, 13,33 % hävikki, aika 14048ms (14.048 s)
 
-(ping kuva)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ping.jpg)
 
 ---
 
 11.Kuinka monta reititintä on matkalla virtuaalikoneestasi osoitteeseen www.laurea.fi linkittyy ulkoiselle sivustolle?
 
-(traceroute kuva)
+![](https://github.com/PetteriHavia/E9955-3003-Linux-Johdatus/blob/main/src/Kuvat/traceroute.jpg)
