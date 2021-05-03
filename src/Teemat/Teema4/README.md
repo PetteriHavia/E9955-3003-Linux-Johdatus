@@ -2,7 +2,7 @@
 
 ## 4.1: Käyttäjähallinta
 
-1.Luo kaksi uutta käyttäjää (opettaja ja opiskelija). Käytä toisen luomisessa komentoriviä ja toisen graafista käyttöliittymää. Aseta käyttäjille myös kotihakemistot.
+### *1. Luo kaksi uutta käyttäjää (opettaja ja opiskelija). Käytä toisen luomisessa komentoriviä ja toisen graafista käyttöliittymää. Aseta käyttäjille myös kotihakemistot.*
 
 - Lisätään uusi käyttäjä Linuxista löytyvän adduser- komennon avulla
 
@@ -18,7 +18,7 @@ Käyttäjien kotihakemistot
 
 ---
 
-2.Lisää toinen käyttäjistä ryhmään nimeltä “opiskelijat” ja toinen ryhmään "opettajat". Käytä ainakin toisessa operaatiossa komentoriviä.
+### *2. Lisää toinen käyttäjistä ryhmään nimeltä “opiskelijat” ja toinen ryhmään "opettajat". Käytä ainakin toisessa operaatiossa komentoriviä.*
 
 sudo usermod -a -G opettajat opettaja
 
@@ -28,31 +28,31 @@ sudo usermod -a -G opettajat opettaja
 
 ---
 
-3.Luo hakemistot “opiskelijoiden_tiedostot” ja "opettajien_tiedostot", joille annat oikeudet vain asianosaisille ryhmille. Varmista kokeilemalla molemmilla käyttäjillä, että oikeudet ovat voimassa. Käytä ainakin toisessa operaatiossa komentoriviä
+### *3. Luo hakemistot “opiskelijoiden_tiedostot” ja "opettajien_tiedostot", joille annat oikeudet vain asianosaisille ryhmille. Varmista kokeilemalla molemmilla käyttäjillä, että oikeudet ovat voimassa. Käytä ainakin toisessa operaatiossa komentoriviä.*
 
 
 Opiskelijat:
 
 Luodaan hakemisto:
 
-sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot
+`sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot`
 
 Asetetaan vaadittavat oikeudet:
 
-sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot
+`sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot`
 
 
 Opettajat:
 
 Komennot voidaan myös putkittaa yhteen
 
-sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot | sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot
+`sudo mkdir /home/opiskelija/opiskelijoiden_tiedostot | sudo chown opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chgrp opiskelija /home/opiskelija/opiskelijoiden_tiedostot | sudo chmod 770 /home/opiskelija/opiskelijoiden_tiedostot`
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/hakemistot.jpg)
 
 ---
 
-4.Lukitse molemmat tunnukset väliaikaisesti. Käytä sekä komentoriviä että graafista käyttöliittymää.
+### *4. Lukitse molemmat tunnukset väliaikaisesti. Käytä sekä komentoriviä että graafista käyttöliittymää.*
 
 Lukitaan opettaja komentorivin kautta: Sudo usermod -L opettaja
 
@@ -66,9 +66,9 @@ Opiskelija käyttöliittymän kautta
 
 ## 4.2: Prosessien hallinta
 
-Käynnistä komentoriviltä muutamia ohjelmia, esim pico-editori ja firefox selain. Tutki järjestelmän prosesseja sekä graafisessa käyttöliittymässä että komentoriviltä (kts. luentokalvot).
+### *Käynnistä komentoriviltä muutamia ohjelmia, esim pico-editori ja firefox selain. Tutki järjestelmän prosesseja sekä graafisessa käyttöliittymässä että komentoriviltä (kts. luentokalvot).*
 
-1. Selvitä mitkä ovat prosessien ID numerot ja millä prioriteetilla ohjelmat ajetaan? Ota kuvakaappaus tilanteesta.
+### *1. Selvitä mitkä ovat prosessien ID numerot ja millä prioriteetilla ohjelmat ajetaan? Ota kuvakaappaus tilanteesta.*
 
 Käytetyt ohjelmat: Firefox ja Celluloid
 
@@ -78,7 +78,7 @@ Firefox ID: 3022, prioriteetti 20. Celluloid ID 3256 prioriteetti 20.
 
 ---
 
-2.Muuta prosessien nice-arvoja siten, että niitä ajetaan korkeammalla prioriteetilla.
+### *2. Muuta prosessien nice-arvoja siten, että niitä ajetaan korkeammalla prioriteetilla.*
 
 nice -n 5 firefox &
 
@@ -88,7 +88,7 @@ nice -n 4 celluloid &
 
 ---
 
-3.Lopeta prosessit komentorivillä, käyttäen kill-komentoa. Kokeile erilaisia valitsimia. Kerro mitä valitsimet tekevät.
+### *3. Lopeta prosessit komentorivillä, käyttäen kill-komentoa. Kokeile erilaisia valitsimia. Kerro mitä valitsimet tekevät.*
 
 Lopetetaan prosessi ID:n avulla: kill % (PID)
 
@@ -96,7 +96,7 @@ Lopetetaan prosessi ohjelman nimellä: kill (ohjelman nimi)
 
 ---
 
-4.Etsi käynnistämäsi sovellukset prosessilistauksesta yhdellä tai useammalla grep-komennolla.
+### *4 .Etsi käynnistämäsi sovellukset prosessilistauksesta yhdellä tai useammalla grep-komennolla.*
 
 Etsitään "Firefox" ja celluloid
 
@@ -108,21 +108,21 @@ aux | egrep 'firefox|celluloid' | awk '{print $2}'
 
 ---
 
-5.Miten lopettaisit ne yhdellä komennolla
+### *5. Miten lopettaisit ne yhdellä komennolla*
 
 pkill -9 -f "\.\/.+\s\.|firefox|vlc|\[^"
 
 ---
 
-6. Luo crontabiin joukko ajastuksia. Määrittele ajettavaksi seuraavanlaisia ohjelmia:
+### *6. Luo crontabiin joukko ajastuksia. Määrittele ajettavaksi seuraavanlaisia ohjelmia:*
 
 Maanantaisin klo 8:58 suoritetaan komento "firefox http://www.iltalehti.fi"
 
-58 8 * * mon export DISPLAY=:0 && firefox http://www.iltalehti.fi
+- 58 8 * * mon export DISPLAY=:0 && firefox http://www.iltalehti.fi
 
 Keskiviikkoisin klo 15:00 suoritetaan komento "sudo apt-get update && sudo apt-get update -y"
 
-0 15 * wed sudo apt-get update && sudo apt-get update -y ?
+- 0 15 * wed sudo apt-get update && sudo apt-get update -y ?
 
 Joka päivä klo 23:55 suoritetaan komento "varmuuskopioi.sh". Komento tulisi suorittaa root-käyttäjän oikeuksin ja sen tulostus tulisi lähettää sähköpostilla osoitteeseen yllapito@yritys.com
 
@@ -132,7 +132,7 @@ Joka päivä klo 23:55 suoritetaan komento "varmuuskopioi.sh". Komento tulisi su
 
 ## 4.3: Palveluiden luominen
 
-1.Käynnistä Linux-terminaali ja tutki järjestelmän palveluita. Kuinka monta palvelua on running tilassa?
+### *1. Käynnistä Linux-terminaali ja tutki järjestelmän palveluita. Kuinka monta palvelua on running tilassa?*
 
 1 palvelu running tilassa
 
@@ -140,63 +140,63 @@ Joka päivä klo 23:55 suoritetaan komento "varmuuskopioi.sh". Komento tulisi su
 
 Etsi rsyslog -niminen palvelu. Millä komennolla löydät palvelun?
 
-- Onko palvelu käytössä?
+Onko palvelu käytössä?
 
-systemctl list-unit-files --type service --state enabled,generated
+- systemctl list-unit-files --type service --state enabled,generated
 
-rsyslog ei ole käytössä ?????
+- rsyslog ei ole käytössä
 
-- Onko palvelu käynnissä? (running)
+Onko palvelu käynnissä? (running)
 
-systemctl list-units --type service state running
+- systemctl list-units --type service state running
 
-rsyslog on käynnissä
+- rsyslog on käynnissä
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/running.jpg)
 
-- Mikä on Rsyslog palvelun PID
+Mikä on Rsyslog palvelun PID
 
-pgrep ´rsyslog´
+- pgrep ´rsyslog´
 
-Tulos: 2152
+- Tulos: 2152
 
-- verkosta tai man-sivuiltas mitä kyseinen palvelu tekee?
+Verkosta tai man-sivuiltas mitä kyseinen palvelu tekee?
 
-Rsyslog on avoimen lähdekoodin loki seuranta palvelu, jota käytetään UNIX tyyppisissä järjestelmissä lokiviestien edelleen lähettämiseen IP verkossa.
-
----
-
-2.Uudelleenkäynnistä Rsyslog palvelu.
-
-sudo service rsyslog restart
+- Rsyslog on avoimen lähdekoodin loki seuranta palvelu, jota käytetään UNIX tyyppisissä järjestelmissä lokiviestien edelleen lähettämiseen IP verkossa.
 
 ---
-3. Luo sen jälkeen uusi palvelu nimeltä testi. Palvelun tulee sisältää seuraava bash skripti:
 
-echo "Testi starttaa"
-while :
-do
-[ -d "/home" ] && echo "Directory /home/ exists.";
-sleep 15s;
-done
+### *2. Uudelleenkäynnistä Rsyslog palvelu.*
 
-- Ota kuva palvelun Statuksesta.
+- sudo service rsyslog restart
+
+---
+### *3. Luo sen jälkeen uusi palvelu nimeltä testi. Palvelun tulee sisältää seuraava bash skripti:*
+
+`echo "Testi starttaa"`
+`while :`
+`do`
+`[ -d "/home" ] && echo "Directory /home/ exists.";`
+`sleep 15s;`
+`done`
+
+Ota kuva palvelun Statuksesta.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/testirunning.jpg)
 
-- Mikä on palvelun PID?
+Mikä on palvelun PID?
 
-ps aux | grep testipalvelu.service
+- ps aux | grep testipalvelu.service
 
-PID 3964
+- PID 3964
 
-Ylemmässä kuvassa oleva Main PID 2592 viittaa testi.sh tiedostoon
+- Ylemmässä kuvassa oleva Main PID 2592 viittaa testi.sh tiedostoon
 
-- Mitä statuksessa tulostetaan?
+Mitä statuksessa tulostetaan?
 
-Statuksessa tulostetaan palvelun tila (enabled/disabled) onko palvelu käynnissä (running), muisti määrä, Main PID mikä viittaa bash skriptiin
+- Statuksessa tulostetaan palvelun tila (enabled/disabled) onko palvelu käynnissä (running), muisti määrä, Main PID mikä viittaa bash skriptiin
 
-- Ota kuvakaappaus tai tuloste talteen tekemästäsi palvelusta ja sen suorituksesta
+Ota kuvakaappaus tai tuloste talteen tekemästäsi palvelusta ja sen suorituksesta
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/testistatus.jpg)
 
@@ -206,78 +206,78 @@ Statuksessa tulostetaan palvelun tila (enabled/disabled) onko palvelu käynniss�
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/htop.jpg)
 
-1.Mikä palvelu käyttää eniten suoritinta Htop sovelluksessa?
+### *1. Mikä palvelu käyttää eniten suoritinta Htop sovelluksessa?*
 
-PID 1340 – cinnamon
-
----
-
-2.Mikä palvelu käyttää eniten muistia?
-
-PID 1340 - cinnamon
+- PID 1340 – cinnamon
 
 ---
 
-3.Kuinka pitkään tietokone on ollut käynnissä?
+### *2. Mikä palvelu käyttää eniten muistia?*
 
-9min 54 s
-
----
-
-4.Kuinka paljon muistia on käytössä yhteensä ja mikä on kokonaismäärä?
-
-697M / 981M
+- PID 1340 - cinnamon
 
 ---
 
-5.Käynnistä Firefox prosessi, etsi se htop sovelluksella ja lopeta prosessi.
+### *3. Kuinka pitkään tietokone on ollut käynnissä?*
 
-Käytetään SIGKILL signaalia lopettamaan Firefox
+- 9min 54 s
+
+---
+
+### *4. Kuinka paljon muistia on käytössä yhteensä ja mikä on kokonaismäärä?*
+
+- 697M / 981M
+
+---
+
+### *5. Käynnistä Firefox prosessi, etsi se htop sovelluksella ja lopeta prosessi.*
+
+- Käytetään SIGKILL signaalia lopettamaan Firefox
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/sigkill.jpg)
 
 ---
 
-6.Käyttäen Iostat sovellusta katso kuinka paljon levylle on kirjoitettu yhteensä edellisen käynnistyksen jälkeen? Kuinka paljon dataa on luettu?
+### *6.Käyttäen Iostat sovellusta katso kuinka paljon levylle on kirjoitettu yhteensä edellisen käynnistyksen jälkeen? Kuinka paljon dataa on luettu?*
 
-Dataa kijroitettu 584MB
+- Dataa kijroitettu 584MB
 
-Dataa luettu 1324MB
+- Dataa luettu 1324MB
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/iostat.jpg)
 
 ---
 
-7.Mikä on ollut koneesi keskimääräinen ulospäin menevä liikenne?
+### *7. Mikä on ollut koneesi keskimääräinen ulospäin menevä liikenne?*
 
-424.00 Bit/s
+- 424.00 Bit/s
 
 ---
 
-8.Kuinka paljon koneesi on ladannut dataa yhteensä
+### *8. Kuinka paljon koneesi on ladannut dataa yhteensä*
 
-2.13MByte
+- 2.13MByte
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/nload.jpg)
 
 ---
 
-9.Mikä on koneesi lokaali IP-osoite?
+### *9. Mikä on koneesi lokaali IP-osoite?*
 
-10.0.2.15
+- 10.0.2.15
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ipaddr.jpg)
 
 ---
 
-10.Testaa toimiiko yhteys www.laurea.fi osoitteeseen. Mikä IP osoite vastaa osoitteesta?
+### *10. Testaa toimiiko yhteys www.laurea.fi osoitteeseen. Mikä IP osoite vastaa osoitteesta?*
 
-15 pakettia lähetetty, 13 vastaanotettu, 13,33 % hävikki, aika 14048ms (14.048 s)
+- 15 pakettia lähetetty, 13 vastaanotettu, 13,33 % hävikki, aika 14048ms (14.048 s)
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/ping.jpg)
 
 ---
 
-11.Kuinka monta reititintä on matkalla virtuaalikoneestasi osoitteeseen www.laurea.fi linkittyy ulkoiselle sivustolle?
+### *11. Kuinka monta reititintä on matkalla virtuaalikoneestasi osoitteeseen www.laurea.fi linkittyy ulkoiselle sivustolle?*
 
 ![](https://github.com/PetteriHavia/E9955-3003-Linux-Johdatus/blob/main/src/Kuvat/traceroute.jpg)
