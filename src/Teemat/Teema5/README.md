@@ -3,7 +3,7 @@
 ## 5.2 Linuxin kovennus
 
 
-## Tehtävä A: Palomuurin asennus ja säätö
+### *Tehtävä A: Palomuurin asennus ja säätö*
 
 ### *1. Asenna Linuxiisi UFW sekä GUFW -palomuurisovellukset. Käynnistä palomuuri ja katso sen status.*
 
@@ -20,6 +20,8 @@
 ### *3. Salli kaikki http ja https liikenne koneelle.*
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/http.jpg)
+
+---
 
 ### *4. Kiellä kaikki saapuva ftp liikenne koneelle*
 
@@ -73,7 +75,7 @@
 
 ## 5.3 Salasanojen murtaminen
 
-## TEHTÄVÄ  A: SALASANOJEN MURTAMINEN RAAKAA LASKENTAA KÄYTTÄEN
+### *TEHTÄVÄ  A: SALASANOJEN MURTAMINEN RAAKAA LASKENTAA KÄYTTÄEN*
 
 1. Luo Linuxiin kolme uutta käyttäjää aiemmin opitulla tavalla. Anna käyttäjille nimeksi: heikko, keski ja vahva. Nimet kuvaavat salasanojen vahvuutta.
 
@@ -126,5 +128,11 @@ Kokeile lopuksi murtaa äsken luomasi käyttäjien salasanat
 `20d9de79fec9848e259a4f92d7219fc1`
 `70dca0f15551b30000daffbf1b24d92e`
 `2502986f114ceb52c125f3b9f891f728`
+
+- Kokeilin Kali Linuxin tarjoamaa Johnny Gui versiota salasonojen murtamiseen. Ohjelma mursi 6/7 salasanaa listan avulla ja jäi arvuuttelemaan viimeistä salasanaa.
+
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/Johnny.jpg)
+
+- Hashcrack arvasi heti listan avulla kaikki salasanat.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/hashcrackerSuomi.jpg)
