@@ -129,7 +129,7 @@ Kokeile lopuksi murtaa äsken luomasi käyttäjien salasanat
 `70dca0f15551b30000daffbf1b24d92e`
 `2502986f114ceb52c125f3b9f891f728`
 
-- Kokeilin Kali Linuxin tarjoamaa Johnny Gui versiota salasonojen murtamiseen. Ohjelma mursi 6/7 salasanaa listan avulla ja jäi arvuuttelemaan viimeistä salasanaa.
+- Kokeilin Kali Linuxin tarjoamaa Johnny Gui versiota salasanojen murtamiseen. Ohjelma mursi 6/7 salasanaa listan avulla ja jäi arvuuttelemaan viimeistä salasanaa.
 
 ![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/johnny.jpg)
 
