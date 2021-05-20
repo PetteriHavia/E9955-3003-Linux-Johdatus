@@ -131,7 +131,7 @@ Kokeile lopuksi murtaa äsken luomasi käyttäjien salasanat
 
 - Kokeilin Kali Linuxin tarjoamaa Johnny Gui versiota salasonojen murtamiseen. Ohjelma mursi 6/7 salasanaa listan avulla ja jäi arvuuttelemaan viimeistä salasanaa.
 
-![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/Johnny.jpg)
+![](https://raw.githubusercontent.com/PetteriHavia/E9955-3003-Linux-Johdatus/main/src/Kuvat/johnny.jpg)
 
 - Hashcrack arvasi heti listan avulla kaikki salasanat.
 
